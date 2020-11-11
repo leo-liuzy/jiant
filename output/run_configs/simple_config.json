@@ -1,50 +1,50 @@
 {
   "task_config_path_dict": {
-    "record": "data/configs/record_config.json"
+    "wsc": "data/configs/wsc_config.json"
   },
   "task_cache_config_dict": {
-    "record": {
-      "train": "output/cache/record/train",
-      "val": "output/cache/record/val",
-      "val_labels": "output/cache/record/val_labels",
-      "test": "output/cache/record/test"
+    "wsc": {
+      "train": "output/cache/wsc/train",
+      "val": "output/cache/wsc/val",
+      "val_labels": "output/cache/wsc/val_labels",
+      "test": "output/cache/wsc/test"
     }
   },
   "sampler_config": {
     "sampler_type": "ProportionalMultiTaskSampler"
   },
   "global_train_config": {
-    "max_steps": 2,
-    "warmup_steps": 0
+    "max_steps": 36,
+    "warmup_steps": 3
   },
   "task_specific_configs_dict": {
-    "record": {
-      "train_batch_size": 8,
-      "eval_batch_size": 16,
+    "wsc": {
+      "train_batch_size": 32,
+      "eval_batch_size": 64,
       "gradient_accumulation_steps": 1,
       "eval_subset_num": 500
     }
   },
   "taskmodels_config": {
     "task_to_taskmodel_map": {
-      "record": "record"
+      "wsc": "wsc"
     },
     "taskmodel_config_map": {
-      "record": null
+      "wsc": null
     }
   },
   "task_run_config": {
     "train_task_list": [
-      "record"
+      "wsc"
     ],
     "train_val_task_list": [
-      "record"
+      "wsc"
     ],
     "val_task_list": [
-      "record"
+      "wsc"
     ],
     "test_task_list": [
-      "record"
+      "wsc"
     ]
   },
   "metric_aggregator_config": {
