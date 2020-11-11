@@ -77,7 +77,11 @@ class ConcatenateLogitsAccumulator(BaseAccumulator):
 
     def get_guids(self):
         if self.guid_list:
-            return np.concatenate(self.guid_list)
+            # # # # # # Leo's finding: potentially a general bug
+            # previously return np.concatenate(self.guid_list)
+            # Error Message: 
+            #       ValueError: zero-dimensional arrays cannot be concatenated
+            return np.stack(self.guid_list)
         else:
             return None
 

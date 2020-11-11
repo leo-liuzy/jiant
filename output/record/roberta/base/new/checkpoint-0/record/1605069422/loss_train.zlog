@@ -1,0 +1,2 @@
+{"task": "record", "task_step": 1, "global_step": 1, "loss_val": 0.691179096698761, "TIMESTAMP": 1605069452.740285}
+{"task": "record", "task_step": 2, "global_step": 2, "loss_val": 0.6653908491134644, "TIMESTAMP": 1605069466.271343}
