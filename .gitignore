@@ -10,7 +10,7 @@ __pycache__/
 .Python
 data/
 output/cache
-
+output/**/[0-9]*/
 **/*.tgz
 **/*.zip
 **/*.tar.gz

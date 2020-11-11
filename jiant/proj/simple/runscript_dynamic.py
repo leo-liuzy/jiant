@@ -204,10 +204,10 @@ def run_simple(args: RunConfiguration, with_continue: bool = False):
     assert len(args.tasks) == 1 or type(args.tasks) is str
 
     # run_output_dir = os.path.join(args.exp_dir, args.chkpt_exp_dir, "runs", args.run_name)
-    if type(args.tasks) is str:
-        run_output_dir = os.path.join(args.exp_dir, args.chkpt_exp_dir, args.tasks)
-    else:
-        run_output_dir = os.path.join(args.exp_dir, args.chkpt_exp_dir, args.tasks[0])
+    # if type(args.tasks) is str:
+    run_output_dir = os.path.join(args.exp_dir, args.chkpt_exp_dir)
+    # else:
+    #     run_output_dir = os.path.join(args.exp_dir, args.chkpt_exp_dir)
 
     if (
         args.save_checkpoint_every_steps
