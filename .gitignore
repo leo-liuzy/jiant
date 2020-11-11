@@ -9,11 +9,8 @@ __pycache__/
 # Distribution / packaging
 .Python
 data/
-<<<<<<< HEAD
 output/cache
 
-=======
->>>>>>> e31c945be23aa29e3d57ea2d7de3dcf4e323645e
 build/
 develop-eggs/
 dist/
