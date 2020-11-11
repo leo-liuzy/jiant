@@ -11,6 +11,8 @@ __pycache__/
 data/
 output/cache
 output/**/[0-9]*/
+output/**/*.p
+
 **/*.tgz
 **/*.zip
 **/*.tar.gz
