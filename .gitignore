@@ -11,6 +11,10 @@ __pycache__/
 data/
 output/cache
 
+**/*.tgz
+**/*.zip
+**/*.tar.gz
+
 build/
 develop-eggs/
 dist/
