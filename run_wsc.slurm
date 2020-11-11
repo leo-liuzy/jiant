@@ -41,7 +41,7 @@ dataset=all
 dir=steps
 for chkpt in "1000000 640000 320000 160000 80000 40000 20000 6400 3200 0"
 do
-     bash run_wsc.sh ${dataset} ${dir} ${chkpt} & # > slurmout/${task}-${dataset}-${dir}-"${chkpt}".slurm
+     bash run_wsc.sh ${dataset} ${dir} "${chkpt}" # & # > slurmout/${task}-${dataset}-${dir}-"${chkpt}".slurm
 done
 
 wait

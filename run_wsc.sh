@@ -2,7 +2,7 @@
 
 
 batch_size=32
-epoch=5
+epoch=10
 pretrain_output_dir="../dynamic_during_pretraining/output"
 scenario=${1}
 model_dir=mlm+${scenario}/roberta_bz256_save${2}

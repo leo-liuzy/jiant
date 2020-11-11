@@ -99,6 +99,9 @@ class JiantMetarunner(AbstractMetarunner):
         self.single_use_check = True
 
     def yield_train_step(self):
+        # from ipdb import set_trace as bp
+        # a = list(self.model.parameters())
+        # bp()
         if self.train_state is None:
             # Fresh run
             train_iterator = self.runner.run_train_context(verbose=self.verbose)

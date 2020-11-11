@@ -1,11 +1,11 @@
 {
   "run_name": "simple",
   "exp_dir": "output",
-  "chkpt_exp_dir": "wsc/mlm+all/roberta_bz256_savesteps/checkpoint_1000000",
+  "chkpt_exp_dir": "wsc/mlm+all/roberta_bz256_savesteps/checkpoint_0",
   "data_dir": "data",
   "model_type": "roberta-base",
   "model_weights_path": null,
-  "model_cache_path": "../dynamic_during_pretraining/output/mlm+all/roberta_bz256_savesteps/checkpoint_1000000",
+  "model_cache_path": "../dynamic_during_pretraining/output/mlm+all/roberta_bz256_savesteps/checkpoint_0",
   "tasks": "wsc",
   "train_tasks": [
     "wsc"

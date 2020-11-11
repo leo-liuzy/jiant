@@ -1,8 +1,8 @@
 {
   "train_state": {
-    "global_steps": 180,
+    "global_steps": 90,
     "task_steps": {
-      "wsc": 180
+      "wsc": 90
     }
   }
 }

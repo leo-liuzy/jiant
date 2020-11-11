@@ -14,8 +14,8 @@
     "sampler_type": "ProportionalMultiTaskSampler"
   },
   "global_train_config": {
-    "max_steps": 180,
-    "warmup_steps": 18
+    "max_steps": 90,
+    "warmup_steps": 9
   },
   "task_specific_configs_dict": {
     "wsc": {
