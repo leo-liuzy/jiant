@@ -5,10 +5,12 @@ batch_size=32
 epoch=5
 pretrain_output_dir="../dynamic_during_pretraining/output"
 scenario=${1}
-model_dir=mlm+${scenario}/roberta_bz256_savesteps
-chk=1000000
+model_dir=mlm+${scenario}/roberta_bz256_save${2}
+
 task=wsc
 
+for chk in ${3}
+do
 python jiant/proj/simple/runscript_dynamic.py \
                 run \
                 --run_name simple \
@@ -20,3 +22,4 @@ python jiant/proj/simple/runscript_dynamic.py \
                 --tasks ${task} \
                 --train_batch_size ${batch_size} \
                 --num_train_epoch ${epoch}
+done
