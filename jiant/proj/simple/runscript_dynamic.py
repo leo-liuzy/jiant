@@ -18,7 +18,10 @@ class RunConfiguration(zconf.RunConfig):
     # === Required parameters === #
     run_name = zconf.attr(type=str, required=True)
     exp_dir = zconf.attr(type=str, required=True)
+<<<<<<< HEAD
     chkpt_exp_dir = zconf.attr(type=str, required=True)
+=======
+>>>>>>> e31c945be23aa29e3d57ea2d7de3dcf4e323645e
     data_dir = zconf.attr(type=str, required=True)
 
     # === Model parameters === #
@@ -200,6 +203,7 @@ def run_simple(args: RunConfiguration, with_continue: bool = False):
         model_weights_path = os.path.join(
             model_cache_path, args.model_type, "model", f"{args.model_type}.p"
         )
+<<<<<<< HEAD
     # # # # Leo's hack, we need to save the result for each checkpoint
     assert len(args.tasks) == 1 or type(args.tasks) is str
 
@@ -208,6 +212,9 @@ def run_simple(args: RunConfiguration, with_continue: bool = False):
         run_output_dir = os.path.join(args.exp_dir, args.chkpt_exp_dir, args.tasks)
     else:
         run_output_dir = os.path.join(args.exp_dir, args.chkpt_exp_dir, args.tasks[0])
+=======
+    run_output_dir = os.path.join(args.exp_dir, "runs", args.run_name)
+>>>>>>> e31c945be23aa29e3d57ea2d7de3dcf4e323645e
 
     if (
         args.save_checkpoint_every_steps
