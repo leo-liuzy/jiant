@@ -5,11 +5,11 @@ batch_size=32
 epoch=10
 pretrain_output_dir="../dynamic_during_pretraining/output"
 scenario=${1}
-model_dir="roberta/base/new" # mlm+${scenario}/roberta_bz256_save${2}
+model_dir=mlm+${scenario}/roberta_bz256_save${2}
 
 task=wsc
 
-for chk in 0
+for chk in 0 3200 6400 20000 40000 80000 160000 320000 640000 1000000
 do
 python jiant/proj/simple/runscript_dynamic.py \
                 run \
@@ -17,6 +17,7 @@ python jiant/proj/simple/runscript_dynamic.py \
                 --exp_dir output \
                 --chkpt_exp_dir ${task}/${model_dir}/checkpoint_${chk} \
                 --data_dir data \
+                --seed 42 \
                 --model_cache_path ${pretrain_output_dir}/${model_dir}/checkpoint_${chk} \
                 --model_type roberta-base \
                 --tasks ${task} \
