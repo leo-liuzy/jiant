@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "jiant/proj/simple/runscript_dynamic.py", line 7, in <module>
+    import jiant.proj.main.tokenize_and_cache as tokenize_and_cache
+  File "/gscratch/cse/yizhongw/leo/jiant/jiant/proj/main/tokenize_and_cache.py", line 3, in <module>
+    import jiant.proj.main.preprocessing as preprocessing
+  File "/gscratch/cse/yizhongw/leo/jiant/jiant/proj/main/preprocessing.py", line 4, in <module>
+    import jiant.shared.caching as shared_caching
+  File "/gscratch/cse/yizhongw/leo/jiant/jiant/shared/caching.py", line 220, in <module>
+    class ChunkedFilesIterableDataset(torch.utils.data.dataset.IterableDataset):
+AttributeError: module 'torch.utils.data.dataset' has no attribute 'IterableDataset'

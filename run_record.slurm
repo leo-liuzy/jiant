@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=record+all+step9
+#SBATCH --job-name=record+all+steps
 #SBATCH --chdir=/gscratch/cse/yizhongw/leo/jiant/
 
 #SBATCH --output=/gscratch/cse/yizhongw/leo/jiant/slurmout/%j.out
@@ -17,7 +17,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 ## Walltime (3 hours). Do not specify a walltime substantially more than your job needs.
-#SBATCH --time=50:00:00
+#SBATCH --time=70:00:00
 ## Memory per node. It is important to specify the memory since the default memory is very small.
 ## For mox, --mem may be more than 100G depending on the memory of your nodes.
 ## For ikt, --mem may be 58G or more depending on the memory of your nodes.
@@ -40,7 +40,10 @@ export PYTHONPATH="/gscratch/cse/yizhongw/leo/jiant:$PYTHONPATH"
 echo $PYTHONPATH
 dataset=all
 dir=steps
-for chkpt in "1000000"
+for chkpt in 880000
+# 760000
+# 520000
+# 420000
 # "640000"
 # "320000"
 # "160000"
