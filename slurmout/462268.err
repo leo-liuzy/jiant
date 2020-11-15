@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "jiant/proj/simple/runscript_dynamic.py", line 5, in <module>
+    import jiant.proj.main.write_task_configs as write_task_configs
+ModuleNotFoundError: No module named 'jiant'
+Traceback (most recent call last):
+  File "jiant/proj/simple/runscript_dynamic.py", line 5, in <module>
+    import jiant.proj.main.write_task_configs as write_task_configs
+ModuleNotFoundError: No module named 'jiant'

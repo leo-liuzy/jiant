@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=record+all+step
+#SBATCH --job-name=record+all+step9
 #SBATCH --chdir=/gscratch/cse/yizhongw/leo/jiant/
 
 #SBATCH --output=/gscratch/cse/yizhongw/leo/jiant/slurmout/%j.out
@@ -8,7 +8,7 @@
 ## The account and partition options should be the same except in a few cases (e.g. ckpt queue and genpool queue).
 #SBATCH --account=h2lab
 #SBATCH --partition=h2lab-gpu
-#SBATCH --nodelist=n2549
+#SBATCH --nodelist=n2548
 ## Resources
 ## Total number of Nodes
 #SBATCH --nodes=1
@@ -36,13 +36,25 @@
 # task=SST-2
 # for chkpt in 
 # "980000 960000 940000 920000 900000 880000 860000 840000 820000 800000 80000 800 780000 760000 740000 720000" "700000 680000 660000 640000 6400 620000 600000 60000 580000 560000 540000 520000 500000 480000 460000 440000" "420000 400000 40000 400 40 4 380000 360000 340000 320000 3200 300000 3 280000 260000 240000 220000" "200000 20000 200 20 2 180000 160000 1600 140000 12800 120000 1000000 100000 100 10 1 0"
-
+export PYTHONPATH="/gscratch/cse/yizhongw/leo/jiant:$PYTHONPATH"
+echo $PYTHONPATH
 dataset=all
 dir=steps
-for chkpt in "1000000" "640000"
-# "320000 160000 80000 40000 20000 6400 3200 0"
+for chkpt in "1000000"
+# "640000"
+# "320000"
+# "160000"
+# "80000"
+# "40000"
+# "6400"
+# "3200"
+# "0"
+# "20000 6400"
+#  "80000" "40000"
+# "320000" "160000"
+# "1000000" "640000"
 do
-     bash run_wsc.sh ${dataset} ${dir} "${chkpt}" & # > slurmout/${task}-${dataset}-${dir}-"${chkpt}".slurm
+     bash run_record.sh ${dataset} ${dir} "${chkpt}" # > slurmout/${task}-${dataset}-${dir}-"${chkpt}".slurm
 done
 
 wait
