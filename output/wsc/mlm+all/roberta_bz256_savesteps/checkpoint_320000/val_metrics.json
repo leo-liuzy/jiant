@@ -1,11 +1,11 @@
 {
-  "aggregated": 0.625,
+  "aggregated": 0.5,
   "wsc": {
-    "loss": 0.6619126498699188,
+    "loss": 0.7016391456127167,
     "metrics": {
-      "major": 0.625,
+      "major": 0.5,
       "minor": {
-        "acc": 0.625
+        "acc": 0.5
       }
     }
   }

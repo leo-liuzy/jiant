@@ -19,7 +19,7 @@
   "no_improvements_for_n_evals": 0,
   "delete_checkpoint_if_done": false,
   "force_overwrite": false,
-  "seed": 3675950355,
+  "seed": 42,
   "learning_rate": 1e-05,
   "adam_epsilon": 1e-08,
   "max_grad_norm": 1.0,
